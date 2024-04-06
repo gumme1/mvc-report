@@ -13,18 +13,24 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }})">
-        <span class="site-title">My Symfony Site</span>
+    <header class="site-header">
+        <span class="site-title">My report Site</span>
     </header>
     <body>
         <nav>
             <ul>
                 <li><a href="{{ path('home') }}">Home</a></li>
                 <li><a href="{{ path('about') }}">About</a></li>
-                <li><a href="{{ path('lucky_number') }}">Lucky number</a></li>
+                <li><a href="{{ path('lucky_number') }}">Lucky</a></li>
+                <li><a href="{{ path('report') }}">report</a></li>
             </ul>
         </nav>
 
         {% block body %}{% endblock %}
     </body>
+
+    <footer class="footer">
+    <div>Anton Gummesson</div>
+    <div><a href="https://github.com/gumme1/mvc-report">länk till github</a><div>
+    </footer>
 </html>

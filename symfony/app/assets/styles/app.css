@@ -1,13 +1,54 @@
 body {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 800px;
+    background-color: #ddd;
 }
 
 h1 {
     border-bottom: 4px double #ccc;
 }
 
-body {
+/* body {
     background: url('../images/background.jpg');
     background-size: cover;
+} */
+
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+}
+
+@keyframes color-change {
+    0%, 100% { color: red; }
+    50% { color: blue; }
+}
+
+.text {
+    animation: color-change 2s infinite;
+}
+
+.site-title {
+    text-align: center;
+    color: #eee;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, indigo, rgb(229, 92, 92));
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.footer {
+    background-color: rgb(129, 109, 143);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Landing Page</title>
+</head>
+<body>
+    <h1>API Landing Page</h1>
+    <ul>
+        {% for route in jsonRoutes %}
+            <li><strong>{{ route.path }}</strong> ({{ route.method }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
