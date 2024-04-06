@@ -1,6 +1,6 @@
 # Min Webbplats
 
-![Webbplatsens logotyp](nordic.jpg)
+![Webbplatsens logotyp](public/app/assets/images/nordic.jpg)
 
 ## Beskrivning
 Det här är min fantastiska webbplats som jag utvecklar med Symfony-ramverket. Webbplatsen erbjuder en mängd olika funktioner och innehåll som du kommer att älska.
