@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/glider.svg') }}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <header class="site-header">
+        <span class="site-title">My report Site</span>
+    </header>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="{{ path('pig_start') }}">Pig game</a></li>
+            </ul>
+        </nav>
+
+        {% block main %}{% endblock %}
+    </body>
+
+    <footer class="footer">
+    <div>Anton Gummesson</div>
+    <div><a href="https://github.com/gumme1/mvc-report">länk till github</a><div>
+    </footer>
+</html>
