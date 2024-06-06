@@ -23,8 +23,15 @@
                 <li><a href="{{ path('about') }}">About</a></li>
                 <li><a href="{{ path('lucky_number') }}">Lucky</a></li>
                 <li><a href="{{ path('report') }}">report</a></li>
+                <li><a href="{{ path('landing_page') }}">card</a></li>
             </ul>
         </nav>
+
+        {% for flashMessage in app.flashes('success') %}
+            <div class="alert alert-success" role="alert">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
 
         {% block body %}{% endblock %}
     </body>

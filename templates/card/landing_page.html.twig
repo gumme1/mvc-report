@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Card Deck Landing Page{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Card Deck Application!</h1>
+    <p>This is the landing page for the card deck application. Below are the links to various pages:</p>
+    <ul>
+        <li><a href="{{ path('card_deck') }}">Show Card Deck</a></li>
+        <li><a href="{{ path('shuffle') }}">Shuffle Card Deck</a></li>
+        <li><a href="{{ path('draw') }}">Draw Card</a></li>
+        <li><a href="{{ path('test_numbers', {num: 5}) }}">Test Drawing Multiple Cards</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+{% endblock %}

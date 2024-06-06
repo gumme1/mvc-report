@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Card Deck{% endblock %}
+
+{% block body %}
+    <h1>Card Deck</h1>
+    {# <ul>
+        {% for card in cards %}
+            <li>{{ card.getAsStringCard() }}</li>
+        {% endfor %}
+    </ul> #}
+
+    <ul class="cardList">
+        {% for card in cards %}
+            <li><span class="card">{{ card }}</span></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

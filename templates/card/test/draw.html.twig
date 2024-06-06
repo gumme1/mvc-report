@@ -1,0 +1,28 @@
+{# {% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Roll a dice</h1>
+
+<p>Here is the value of the card.</p>
+
+<ul>
+    <li>{{ drawnCard.getAsStringCard }}</li>
+</ul>
+{% endblock %} #}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <h1>Draw a Card</h1>
+    {% if drawnCard %}
+        <p>Here are the values of the drawn cards:</p>
+        <ul>
+            
+            <span class="card">{{ drawnCard}}</span>
+
+        </ul>
+    {% else %}
+        <p>The deck is empty. Please <a href="{{ path('shuffle') }}">shuffle the deck</a> to continue playing.</p>
+    {% endif %}
+{% endblock %}

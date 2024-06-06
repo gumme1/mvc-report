@@ -1,0 +1,26 @@
+{# {% extends 'base.html.twig' %}
+
+{% block title %}Session Contents{% endblock %}
+
+{% block body %}
+    <h1>Session Contents</h1>
+    <ul>
+        {% for key, value in sessionData %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %} #}
+
+{# templates/session/landing_page.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Session Landing Page{% endblock %}
+
+{% block body %}
+    <h1>Session Contents</h1>
+    <p>Below is the content of the session:</p>
+    <pre>
+        {{ dump(sessionData) }}
+    </pre>
+{% endblock %}

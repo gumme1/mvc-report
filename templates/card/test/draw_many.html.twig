@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Roll many dice</h1>
+
+<p>You drew {{ num_cards }} cards. Here is the value of the cards.</p>
+
+<ul class="cardList">
+
+
+{% for card in cardDraw %}
+
+    <li><span class="card">{{ card }}</span></li>
+
+{% endfor %}
+</ul>
+
+{# <p>You drew {{ num_cards }} cards. Here is the value of the cards.</p>
+<ul class="cardList">
+    {% for card in cardDraw %}
+        <li><span class="card">{{ card.getAsStringCard() }}</span></li>
+    {% endfor %}
+</ul>
+<p>Try to draw <a href="{{ path('test_numbers', {num: 5}) }}">5</a> cards.</p> #}
+
+<p>Try to draw
+    <a href="{{ path('test_numbers', {num: 5}) }}">5</a>
+    or 
+    <a href="{{ path('test_numbers', {num: 10}) }}">10</a>
+    cards.
+</p>
+{% endblock %}

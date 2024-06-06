@@ -87,10 +87,24 @@ ul.dicearea {
     margin: 0;
     padding: 0;
 }
-
+/* 
 ul.dicearea li {
     display: inline;
+} */
+
+ul.cardList li {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
 }
+
+ul.cardList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    margin-bottom: 15rem;
+}
+
 
 .flash-notice {
     padding: 0.5em;
@@ -110,4 +124,15 @@ ul.dicearea li {
 }
 .flash-warning:before {
     content: "⚠";
+}
+
+.card {
+    border: 1px solid black;
+    height: 8em;
+    width: 5em;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

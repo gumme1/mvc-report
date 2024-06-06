@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{# <!DOCTYPE html>
 <html>
 <head>
     <title>API Landing Page</title>
@@ -11,4 +11,22 @@
         {% endfor %}
     </ul>
 </body>
-</html>
+</html> #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}API Overview{% endblock %}
+
+{% block body %}
+<h1>API Overview</h1>
+
+<p>Welcome to the API overview page. Below you will find a list of all JSON routes offered by this website along with their descriptions:</p>
+
+<ul>
+    {% for route in jsonRoutes %}
+        <li>
+            <strong>{{ route.path }}</strong> ({{ route.method }}): {{ route.description }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
